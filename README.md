@@ -14,7 +14,7 @@
 * 第二步：配置项 -> 添加[SOCKS] -> 填写IP、端口号、用户名和密码即可
 * 第三步：配置项 -> 添加链式代理 -> 选择自建节点  -> 下方白框中右键“添加子配置”（选择代理节点） -> 再次右键“添加子配置”（选择出口节点）
 
-<img src="/workspaces/vpn/d3dd70a903541f37116786f3b4d19a17.png" alt="V2RayN链式代理" style="zoom:50%;" />
+<img src="https://github.com/vps888/vpn/blob/main/d3dd70a903541f37116786f3b4d19a17.png" alt="V2RayN链式代理" style="zoom:50%;" />
 
 ## 2. Clash内核系列
 
@@ -48,6 +48,6 @@ rules:
 
 链式代理配置方式：编辑出口节点信息 -> 代理通过 -> 选择代理节点。
 
-<img src="/workspaces/vpn/image-20260508213100284.png" alt="Shadowrocket链式代理设置" style="zoom:50%;" />
+<img src="https://github.com/vps888/vpn/blob/main/image-20260508213100284.png" alt="Shadowrocket链式代理设置" style="zoom:50%;" />
 
-<img src="/workspaces/vpn/image-20260508213242668.png" alt="Shadowrocket链式代理效果" style="zoom:50%;" />
+<img src="https://github.com/vps888/vpn/blob/main/image-20260508213242668.png" alt="Shadowrocket链式代理效果" style="zoom:50%;" />

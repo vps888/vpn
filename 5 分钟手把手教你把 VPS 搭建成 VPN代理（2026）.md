@@ -4,6 +4,8 @@
 
 **自建 VPN 的好处**：安全，独享，稳定，自由，灵活。
 
+如果你只是想省事，不想买 VPS、装脚本、维护节点，可以直接看这篇：[2026年6月 稳定优质的 VPN 机场推荐](https://zhetengxia.com/blog/claude-chatgpt-vpn-airport-recommendations-2026/)；如果你更在意独享和可控，再继续看下面的自建方案。
+
 ## 0. 准备物料
 
 * VPS（或服务器）一台：如果没有，参考：https://github.com/vps888/vps2605 ，至少要有公网 IP 地址、端口号（默认 22）、用户名、密码；

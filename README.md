@@ -4,6 +4,8 @@
 
 >【更新】2026.06.17 [【新增今年最具性价比的CN2 VPS，2C4G40G 2T，年388RMB】](https://github.com/vps888/vps2605)
 > 
+> 如果你不想自己搭 VPS，想直接找稳定的 VPN 机场 / 代理平台，可以看：[2026年6月 稳定优质的 VPN 机场推荐](https://github.com/vps888/vpn/blob/main/2026%E5%B9%B46%E6%9C%88%20%E7%A8%B3%E5%AE%9A%E4%BC%98%E8%B4%A8%E7%9A%84%20VPN%20%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90.md)
+>
 > 如果你想自己购买搭建 VPS，[参考： 5 分钟手把手教你把 VPS 搭建成 VPN代理](https://github.com/vps888/vpn/blob/main/5%20%E5%88%86%E9%92%9F%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E6%8A%8A%20VPS%20%E6%90%AD%E5%BB%BA%E6%88%90%20VPN%E4%BB%A3%E7%90%86%EF%BC%882026%EF%BC%89.md) 
 
 假设你有一个**代理节点**（比如[自己搭建的VPS](https://github.com/vps888/vpn/blob/main/5%20%E5%88%86%E9%92%9F%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E6%8A%8A%20VPS%20%E6%90%AD%E5%BB%BA%E6%88%90%20VPN%E4%BB%A3%E7%90%86%EF%BC%882026%EF%BC%89.md)、购买的VPN代理等），还有一个**出口节点**（比如购买的静态IP）。

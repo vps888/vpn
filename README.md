@@ -1,32 +1,38 @@
-# 主流代理客户端设置链式代理的方法
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen)]()
-[![Updated](https://img.shields.io/badge/Updated-May_2026-blue)]()
+---
+title: "主流代理客户端设置链式代理的方法：V2RayN、Clash 与 Shadowrocket"
+description: "介绍如何在 V2RayN、Clash 和 Shadowrocket 中配置代理节点与静态 IP 出口节点，实现链式代理。"
+slug: "chain-proxy-setup-guide"
+pubDate: 2026-05-08
+updatedDate: 2026-06-27
+category: "机场代理"
+tags: ["链式代理", "V2RayN", "Clash", "Shadowrocket", "静态 IP"]
+featured: false
+---
+> 【更新】2026.06.17：[三网优化高性价比 VPS 推荐](https://zhetengxia.com/blog/cn2-vps-recommendations-2026)
 
->【更新】2026.06.17 [【新增今年最具性价比的CN2 VPS，2C4G40G 2T，年388RMB】](https://github.com/vps888/vps2605)
-> 
-> 如果你不想自己搭 VPS，想直接找稳定的 VPN 机场 / 代理平台，可以看：[2026年6月 稳定优质的 VPN 机场推荐](https://github.com/vps888/vpn/blob/main/2026%E5%B9%B46%E6%9C%88%20%E7%A8%B3%E5%AE%9A%E4%BC%98%E8%B4%A8%E7%9A%84%20VPN%20%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90.md)
->
-> 如果你想自己购买搭建 VPS，[参考： 5 分钟手把手教你把 VPS 搭建成 VPN代理](https://github.com/vps888/vpn/blob/main/5%20%E5%88%86%E9%92%9F%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E6%8A%8A%20VPS%20%E6%90%AD%E5%BB%BA%E6%88%90%20VPN%E4%BB%A3%E7%90%86%EF%BC%882026%EF%BC%89.md) 
+> 如果你不想自己搭 VPS，想直接找稳定的 VPN 机场或代理平台，可以看：[稳定优质的 VPN 机场推荐](https://zhetengxia.com/blog/claude-chatgpt-vpn-airport-recommendations-2026)
 
-假设你有一个**代理节点**（比如[自己搭建的VPS](https://github.com/vps888/vpn/blob/main/5%20%E5%88%86%E9%92%9F%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E6%8A%8A%20VPS%20%E6%90%AD%E5%BB%BA%E6%88%90%20VPN%E4%BB%A3%E7%90%86%EF%BC%882026%EF%BC%89.md)、购买的VPN代理等），还有一个**出口节点**（比如购买的静态IP）。
+> 如果你想自己购买并搭建 VPS，可以参考：[5 分钟手把手教你把 VPS 搭建成 VPN 代理](https://zhetengxia.com/blog/vps-vpn-proxy-setup-2026)
 
-由于直连出口节点网络质量很差，经常丢包，所以希望通过代理节点中转一下，这种路由方式称为链式代理。
+假设你有一个**代理节点**，比如[自己搭建的 VPS](https://zhetengxia.com/blog/vps-vpn-proxy-setup-2026)或购买的 VPN 代理，还有一个**出口节点**，比如购买的静态 IP。
 
-本文主要介绍代理+静态IP的链接方法。
+由于直连出口节点的网络质量很差，经常丢包，所以希望通过代理节点中转一下。这种路由方式称为链式代理。
 
-## 1. V2RayN
+本文主要介绍代理节点加静态 IP 出口节点的连接方法。
 
-适用于Windows、MacOS
+## V2RayN
 
-* 第一步：配置项 -> （提前复制代理链接信息）从剪切板导入分享链接
-* 第二步：配置项 -> 添加[SOCKS] -> 填写IP、端口号、用户名和密码即可
-* 第三步：配置项 -> 添加链式代理 -> 选择自建节点  -> 下方白框中右键“添加子配置”（选择代理节点） -> 再次右键“添加子配置”（选择出口节点）
+适用于 Windows、macOS。
 
-<img src="https://github.com/vps888/vpn/blob/main/d3dd70a903541f37116786f3b4d19a17.png" alt="V2RayN链式代理" style="zoom:50%;" />
+* 第一步：配置项 → 提前复制代理链接信息 → 从剪贴板导入分享链接。
+* 第二步：配置项 → 添加 SOCKS → 填写 IP、端口号、用户名和密码。
+* 第三步：配置项 → 添加链式代理 → 选择自建节点 → 在下方白框中右键“添加子配置”（选择代理节点）→ 再次右键“添加子配置”（选择出口节点）。
 
-## 2. Clash内核系列
+![V2RayN 链式代理](https://zhetengxia.com/article-assets/chain-proxy-setup-guide/v2rayn-chain-proxy.png)
 
-主要适用于Windows、MacOS、Android等。Clash工具主要是通过yaml配置文件设置，链式代理设置方式如下：
+## Clash 内核系列
+
+主要适用于 Windows、macOS、Android 等系统。Clash 工具主要通过 YAML 配置文件设置，链式代理的配置方式如下：
 
 ```yaml
 # ... 省略 ...
@@ -45,17 +51,22 @@ rules:
   # ... 省略 ...
 ```
 
-* US-HostDare-IP 是代理节点信息，使用的VLESS协议；
-* US-StaticIP-via-HostDare 是出口节点（静态IP）信息，使用的socks5协议，重点是：**dialer-proxy: "US-HostDare-IP"**，意思就是通过**US-HostDare-IP**链接。
+* `US-HostDare-IP` 是代理节点信息，使用 VLESS 协议。
+* `US-StaticIP-via-HostDare` 是出口节点（静态 IP）信息，使用 SOCKS5 协议。重点是 `dialer-proxy: "US-HostDare-IP"`，意思是通过 `US-HostDare-IP` 连接。
 
-## 3. Shadowrocket（小火箭）
+## Shadowrocket（小火箭）
 
-主要适用于iOS、iPadOS等。
+主要适用于 iOS、iPadOS 等系统。
 
-配置方式和V2rayN一样简单，首先还是先添加代理节点和出口节点信息，不赘述。
+配置方式和 V2RayN 一样简单，首先添加代理节点和出口节点信息。
 
-链式代理配置方式：编辑出口节点信息 -> 代理通过 -> 选择代理节点。
+链式代理配置方式：编辑出口节点信息 → 代理通过 → 选择代理节点。
 
-<img src="https://github.com/vps888/vpn/blob/main/image-20260508213100284.png" alt="Shadowrocket链式代理设置" style="zoom:50%;" />
+![Shadowrocket 链式代理设置](https://zhetengxia.com/article-assets/chain-proxy-setup-guide/shadowrocket-chain-proxy-settings.png)
 
-<img src="https://github.com/vps888/vpn/blob/main/image-20260508213242668.png" alt="Shadowrocket链式代理效果" style="zoom:50%;" />
+![Shadowrocket 链式代理效果](https://zhetengxia.com/article-assets/chain-proxy-setup-guide/shadowrocket-chain-proxy-result.png)
+
+## 原文链接
+
+https://zhetengxia.com/blog/chain-proxy-setup-guide
+

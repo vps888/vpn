@@ -1,14 +1,24 @@
-# 5 分钟手把手教你把 VPS 搭建成 VPN代理（2026）
+---
+title: "5分钟手把手教你把 VPS 搭建成 VPN 代理（2026）"
+description: "从 VPS 准备、SSH 登录、系统初始化、BBR 到代理脚本安装，记录一套小白可照做的自建代理流程。"
+slug: "vps-vpn-proxy-setup-2026"
+pubDate: 2026-05-08
+updatedDate: 2026-06-27
+category: "机场代理"
+tags: ["VPS", "代理配置", "Sing-box", "网络稳定性"]
+featured: false
+---
+> 【更新】2026.06.27：有些朋友不想自己搭 VPS，我补了一篇 [VPN 机场推荐](https://zhetengxia.com/blog/claude-chatgpt-vpn-airport-recommendations-2026)，适合先短周期试用。
 
 **本教程目的**：针对小白朋友，手把手教你如何搭建自己的 VPN 代理服务器，很简单，5 分钟基本能搞定。
 
 **自建 VPN 的好处**：安全，独享，稳定，自由，灵活。
 
-如果你只是想省事，不想买 VPS、装脚本、维护节点，可以直接看这篇：[2026年6月 稳定优质的 VPN 机场推荐](https://zhetengxia.com/blog/claude-chatgpt-vpn-airport-recommendations-2026/)；如果你更在意独享和可控，再继续看下面的自建方案。
+如果你更在意独享和可控，再继续看下面的自建方案。
 
 ## 0. 准备物料
 
-* VPS（或服务器）一台：如果没有，参考：https://github.com/vps888/vps2605 ，至少要有公网 IP 地址、端口号（默认 22）、用户名、密码；
+* VPS（或服务器）一台：如果没有，参考：[三网优化 VPS 推荐](https://zhetengxia.com/blog/cn2-vps-recommendations-2026) ，至少要有公网 IP 地址、端口号（默认 22）、用户名、密码；
 * 支持 SSH 的 Shell 工具，Mac/Linux 操作系统自带 Shell 工具，Windows 朋友可以下载一个 xShell，相信大家都能搞定；
 * VPN 客户端：
 
@@ -64,19 +74,19 @@
    ```
 
 6. 等一小会，自动安装完成，会列出各种工具的订阅链接，如果没记住没关系，这个脚本会创建 sb 命令，通过执行 sb 命令，输入 1，还可以查看订阅链接。详细步骤如下：
-![step1](https://github.com/vps888/vpn/blob/main/step1.png)
+![step1](https://zhetengxia.com/article-assets/vps-vpn-proxy-setup-2026/step1.png)
 
-![step2](https://github.com/vps888/vpn/blob/main/step2.jpg)
+![step2](https://zhetengxia.com/article-assets/vps-vpn-proxy-setup-2026/step2.jpg)
 
-![step3](https://github.com/vps888/vpn/blob/main/step3.jpg)
+![step3](https://zhetengxia.com/article-assets/vps-vpn-proxy-setup-2026/step3.jpg)
 
-![step4](https://github.com/vps888/vpn/blob/main/step4.png)
+![step4](https://zhetengxia.com/article-assets/vps-vpn-proxy-setup-2026/step4.png)
 
 ## 2. 客户端使用
 
 上述会生成三种链接，初学者只关注 vless 协议的即可。红色字体限制的就是客户端类型，我们只介绍两种主流的客户端工具：
 
-![两类主流 VPN 客户端](https://github.com/vps888/vpn/blob/main/client.png)
+![两类主流 VPN 客户端](https://zhetengxia.com/article-assets/vps-vpn-proxy-setup-2026/client.png)
 
 1. 安装客户端
 
@@ -102,6 +112,16 @@
 
 ## 3. 链式代理
 
-如果你还买了静态住宅 IP（ISP），可以参考：https://github.com/vps888/vpn 配置链式代理。因为通常大陆到静态住宅 IP 的网络质量不好，所以需要通过 VPN 代理服务器中转一下网络请求。
+如果你还买了静态住宅 IP（ISP），可以参考本站这篇 [主流代理客户端设置链式代理的方法](https://zhetengxia.com/blog/chain-proxy-setup-guide)。因为通常大陆到静态住宅 IP 的网络质量不好，所以需要通过 VPN 代理服务器中转一下网络请求。
 
-如果还没有静态住宅 IP，看这里：[美国静态住宅IP（4$），我能找到的最便宜的](https://iproyal.com/?r=1309628)
+如果还没有静态住宅 IP，可以参考 [如何在IPRoyal上选择一个干净的静态住宅IP（ISP）](https://zhetengxia.com/blog/iproyal-static-isp-clean-ip-guide)
+
+## GitHub 原文参考
+
+- [三网优化 VPS 推荐（GitHub）](https://github.com/vps888/vps2605)
+- [5 分钟手把手教你把 VPS 搭建成 VPN代理教程（GitHub）](https://github.com/vps888/vpn/blob/main/5%20%E5%88%86%E9%92%9F%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E6%8A%8A%20VPS%20%E6%90%AD%E5%BB%BA%E6%88%90%20VPN%E4%BB%A3%E7%90%86%EF%BC%882026%EF%BC%89.md)
+
+## 原文链接
+
+https://zhetengxia.com/blog/vps-vpn-proxy-setup-2026
+

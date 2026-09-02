@@ -1,13 +1,5 @@
----
-title: "主流代理客户端设置链式代理的方法：V2RayN、Clash 与 Shadowrocket"
-description: "介绍如何在 V2RayN、Clash 和 Shadowrocket 中配置代理节点与静态 IP 出口节点，实现链式代理。"
-slug: "chain-proxy-setup-guide"
-pubDate: 2026-05-08
-updatedDate: 2026-06-27
-category: "机场代理"
-tags: ["链式代理", "V2RayN", "Clash", "Shadowrocket", "静态 IP"]
-featured: false
----
+# 主流代理客户端设置链式代理的方法：V2RayN、Clash 与 Shadowrocket
+
 > 【更新】2026.06.17：[三网优化高性价比 VPS 推荐](https://zhetengxia.com/blog/cn2-vps-recommendations-2026)
 
 > 如果你不想自己搭 VPS，想直接找稳定的 VPN 机场或代理平台，可以看：[稳定优质的 VPN 机场推荐](https://zhetengxia.com/blog/claude-chatgpt-vpn-airport-recommendations-2026)

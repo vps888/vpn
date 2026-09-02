@@ -1,13 +1,5 @@
----
-title: "5分钟手把手教你把 VPS 搭建成 VPN 代理（2026）"
-description: "从 VPS 准备、SSH 登录、系统初始化、BBR 到代理脚本安装，记录一套小白可照做的自建代理流程。"
-slug: "vps-vpn-proxy-setup-2026"
-pubDate: 2026-05-08
-updatedDate: 2026-06-27
-category: "机场代理"
-tags: ["VPS", "代理配置", "Sing-box", "网络稳定性"]
-featured: false
----
+# 5分钟手把手教你把 VPS 搭建成 VPN 代理（2026）
+
 > 【更新】2026.06.27：有些朋友不想自己搭 VPS，我补了一篇 [VPN 机场推荐](https://zhetengxia.com/blog/claude-chatgpt-vpn-airport-recommendations-2026)，适合先短周期试用。
 
 **本教程目的**：针对小白朋友，手把手教你如何搭建自己的 VPN 代理服务器，很简单，5 分钟基本能搞定。
